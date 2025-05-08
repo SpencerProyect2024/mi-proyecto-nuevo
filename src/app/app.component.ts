@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { RouterOutlet } from '@angular/router';  // 👈 Importa el HeaderComponent
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true, // Correcto
+  imports: [
+      HeaderComponent, // El que ya tenías
+      RouterOutlet     // <-- ¡Añadido!
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mi-proyecto-nuevo';
+  title = 'SpencerApp';
 }

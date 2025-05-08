@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #ffffff, #0f73b7);
+  border-radius: 10px;
+}
+
+.logo {
+  margin-bottom: 0;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px; /* Ajusta el valor para bajar la imagen */
+  margin-bottom: 5px; /* Acerca la imagen a los botones */
+}
+
+h1 {
+  color: #003366;
+  font-size: 24px;
+  margin: 0;
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espaciado entre botones */
+}
+
+button {
+  font-size: 16px;
+  padding: 12px 24px;
+  margin: 5px;
+  color: #000000;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: linear-gradient(45deg, #408edd, #dbe3eb); /* Degradado atractivo */
+  border: none;
+  border-radius: 30px; /* Bordes redondeados */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para mayor profundidad */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación suave */
+}
+
+button:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Acentúa la sombra en hover */
+  background: linear-gradient(45deg, #00509e, #003366); /* Invierte el degradado */
+}
+
+button:active {
+  transform: scale(0.95); /* Hace que el botón parezca presionado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce la sombra al hacer clic */
+}
+
+@media (max-width: 500px) {
+  button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+}

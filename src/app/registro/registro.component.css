@@ -1,0 +1,140 @@
+/* src/app/registro/registro.component.css */
+
+/* Contenedor del formulario (el cuadro blanco/transparente) */
+.form-container {
+  display: flex;
+  flex-direction: column; /* APILADO por defecto (Móvil primero) */
+  align-items: center; /* Centra los formularios cuando están apilados */
+  width: 90%; /* Ancho en móviles */
+  max-width: 800px; /* Ancho máximo en pantallas grandes */
+  margin: 30px auto; /* Margen vertical y centrado horizontal */
+  padding: 25px 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Blanco semi-transparente (ajusta opacidad 0 a 1) */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* <-- CORREGIDO */
+  position: relative; /* Para la imagen de fondo opcional */
+  z-index: 1; /* Asegura que esté sobre el fondo del body */
+  overflow: hidden; /* Para contener la imagen de fondo si se desborda */
+}
+
+/* Imagen de fondo (opcional, ajustar o quitar si molesta) */
+/* Esta imagen ahora está como fondo del contenedor blanco */
+.background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain; /* Escala la imagen sin recortar */
+  opacity: 0.08; /* Muy transparente para no interferir con el texto */
+  z-index: -1; /* Detrás del contenido del formulario */
+  user-select: none; /* Evita que se pueda seleccionar */
+  pointer-events: none; /* Evita que interfiera con clics */
+}
+
+/* Contenedor para cada columna/formulario */
+.register-form {
+  width: 100%; /* Ocupa todo el ancho disponible en móvil */
+  margin-bottom: 20px;
+}
+
+/* Quita el margen del último formulario cuando están apilados */
+.register-form:last-of-type {
+  margin-bottom: 0;
+}
+
+/* --- Media Query para pantallas más grandes (Tablet/Desktop) --- */
+@media (min-width: 768px) {
+  .form-container {
+    flex-direction: row; /* Lado a lado */
+    justify-content: space-around; /* Espacio entre columnas */
+    align-items: flex-start; /* Alinea las columnas arriba */
+    width: 70%; /* Ancho original para pantallas grandes */
+  }
+
+  .register-form {
+    width: 45%; /* Ancho de columna original */
+    margin-bottom: 0; /* Sin margen extra */
+  }
+
+   /* Hacemos la imagen un poco más visible en pantallas grandes */
+  .background-image {
+     opacity: 0.1;
+  }
+}
+/* --- Fin Media Query --- */
+
+
+/* Estilos para los campos (Inputs, Labels) */
+.input-container {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-container label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-container label i { /* Estilo para iconos */
+  margin-right: 6px;
+  color: #555;
+  width: 1em; /* Ayuda a alinear texto si el icono varía */
+  text-align: center;
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"],
+.input-container input[type="tel"],
+.input-container input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Importante */
+}
+
+.input-container input:focus {
+  border-color: #3498db; /* Azul claro en foco */
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Estilos para Términos y Condiciones */
+.terms {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 13px;
+  text-align: left;
+  color: #333;
+}
+
+.terms input[type="checkbox"] {
+  margin-right: 10px;
+  width: auto; /* Tamaño natural del checkbox */
+  vertical-align: middle; /* Alinea mejor con el texto */
+}
+
+/* Estilos para Botón Crear Cuenta */
+.create-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db; /* Azul claro (puedes cambiarlo al azul oscuro si prefieres) */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.create-btn:hover {
+  background-color: #2980b9; /* Azul un poco más oscuro */
+}

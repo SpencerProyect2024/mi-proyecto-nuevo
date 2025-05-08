@@ -1,0 +1,108 @@
+/* Asegúrate de que el contenedor ocupe todo el ancho y altura de la pantalla */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #ffffff, #0f73b7);
+  overflow: hidden;
+}
+
+/* Estilo para el contenedor y la imagen de fondo */
+.login-container {
+  position: relative;
+  height: 50vh;
+  width: 100vw;
+}
+
+.background-image {
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra la imagen respecto al punto central */
+  max-width: 100%;
+}
+
+/* Estilo para la caja de inicio de sesión */
+.login-box {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.459); /* Fondo blanco con opacidad */
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(18, 18, 136); /* Borde azul */
+  text-align: center;
+  margin: auto;
+}
+
+h2 {
+  color: #333;
+}
+
+/* Estilo para los campos de entrada */
+.input-container {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-container label {
+  font-size: 14px;
+  color: #333;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.input-container input:focus {
+  border-color: rgb(0, 0, 0);
+  outline: none;
+}
+
+/* Estilo para el checkbox "Recordarme" */
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.remember-me input {
+  margin-right: 10px;
+}
+
+/* Estilo para el botón de iniciar sesión */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(27, 27, 179);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+/* Estilo para el enlace de "Olvidaste tu contraseña?" */
+.forgot-password {
+  display: block;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}

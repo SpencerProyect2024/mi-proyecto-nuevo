@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  /* ¡Asegúrate de tener aquí el fondo que te guste! */
+  /* Este es el degradado azul claro que usamos para el ejemplo: */
+  background: linear-gradient(to bottom, #e1f5fe, #b3e5fc);
+  /* Estas líneas centran el contenido principal si la app es simple */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Permite scroll si el contenido crece */
+}
+
+/* Otros estilos globales que necesites */
